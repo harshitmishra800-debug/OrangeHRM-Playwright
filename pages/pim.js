@@ -13,9 +13,9 @@ class pim {
         this.supervisor_name = page.locator('(//*[@placeholder="Type for hints..."])[2]');
         this.supervisorname_selection = page.locator('//*[@class="oxd-autocomplete-option"]').first();
         this.jobtitle = page.locator('(//*[@class="oxd-select-text-input"])[3]');
-        this.jobtitle_selection = page.getByText('Chief Financial Officer', { exact: true });
-        this.sabunit = page.locator('(//*[@class="oxd-select-text-input"])[4]');
-        this.sabunit_selection = page.getByText('Development', { exact: true });
+        this.jobtitle_selection = page.getByText('QA Lead', { exact: true });
+        //this.sabunit = page.locator('(//*[@class="oxd-select-text-input"])[4]');
+       // this.sabunit_selection = page.getByText('Human Resources', { exact: true });
         this.search = page.locator('//*[@type="submit"]');
     }
     async pimsearch() {
@@ -35,8 +35,8 @@ class pim {
         await this.page.keyboard.press('Enter');
         await this.jobtitle.click();
         await this.jobtitle_selection.click();
-        await this.sabunit.click()
-        await this.sabunit_selection.click();
+        //await this.sabunit.click()
+        //await this.sabunit_selection.click();
 
         await this.search.click();
 

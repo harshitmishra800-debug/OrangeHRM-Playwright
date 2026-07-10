@@ -3,7 +3,7 @@ class leave {
         this.page = page;
         this.leave = page.locator('(//*[@class="oxd-text oxd-text--span oxd-main-menu-item--name"])[3]');
         this.myLeave = page.getByRole('link', {
-            name: 'My Leave',
+            name: 'Recruitment',
             exact: true
         });
         this.calender_view = page.locator('(//*[@placeholder="yyyy-dd-mm"])[1]');
