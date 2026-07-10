@@ -78,6 +78,7 @@ class leave {
         await this.comments.fill("It is a good one");
         await this.assignButton.click();
         await this.ok_button.click();
+        await this.page.pause();
         
         
     }
