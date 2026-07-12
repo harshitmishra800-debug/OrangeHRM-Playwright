@@ -11,6 +11,13 @@ module.exports = defineConfig({
     timeout: 10 * 1000,
   },
 
+  // Add this section
+  reporter: [
+    ['list'],
+    ['html'],
+    ['allure-playwright']
+  ],
+
   use: {
     headless: false,
 

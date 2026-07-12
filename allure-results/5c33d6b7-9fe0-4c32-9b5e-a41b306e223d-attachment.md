@@ -1,0 +1,353 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: myinfo.spec.js >> my info section
+- Location: tests/myinfo.spec.js:5:1
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: getByRole('radio', { name: 'Male' }) resolved to 2 elements:
+    1) <input value="1" type="radio" data-v-7ef819fd=""/> aka getByRole('radio', { name: 'Male', exact: true })
+    2) <input value="2" type="radio" data-v-7ef819fd=""/> aka getByRole('radio', { name: 'Female' })
+
+Call log:
+  - waiting for getByRole('radio', { name: 'Male' })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7] [cursor=pointer]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "Search" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Admin" [ref=e21] [cursor=pointer]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24]: Admin
+            - listitem [ref=e25]:
+              - link "PIM" [ref=e26] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40]: PIM
+            - listitem [ref=e41]:
+              - link "Leave" [ref=e42] [cursor=pointer]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45]: Leave
+            - listitem [ref=e46]:
+              - link "Time" [ref=e47] [cursor=pointer]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53]: Time
+            - listitem [ref=e54]:
+              - link "Recruitment" [ref=e55] [cursor=pointer]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61]: Recruitment
+            - listitem [ref=e62]:
+              - link "My Info" [ref=e63] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69]: My Info
+            - listitem [ref=e70]:
+              - link "Performance" [ref=e71] [cursor=pointer]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79]: Performance
+            - listitem [ref=e80]:
+              - link "Dashboard" [ref=e81] [cursor=pointer]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84]: Dashboard
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86] [cursor=pointer]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91] [cursor=pointer]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97] [cursor=pointer]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100]
+                - generic [ref=e104]: Claim
+            - listitem [ref=e105]:
+              - link "Buzz" [ref=e106] [cursor=pointer]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109]: Buzz
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "PIM" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126]
+              - paragraph [ref=e127]: Ahmad Doe
+              - generic [ref=e128]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - button "" [ref=e133] [cursor=pointer]:
+            - generic [ref=e134]: 
+  - generic [ref=e135]:
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - heading "Ahmad Doe" [level=6] [ref=e143]
+          - img "profile picture" [ref=e146] [cursor=pointer]
+        - tablist [ref=e147]:
+          - tab "Personal Details" [ref=e148]:
+            - link "Personal Details" [ref=e149] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewPersonalDetails/empNumber/7
+          - tab "Contact Details" [ref=e150]:
+            - link "Contact Details" [ref=e151] [cursor=pointer]:
+              - /url: /web/index.php/pim/contactDetails/empNumber/7
+          - tab "Emergency Contacts" [ref=e152]:
+            - link "Emergency Contacts" [ref=e153] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewEmergencyContacts/empNumber/7
+          - tab "Dependents" [ref=e154]:
+            - link "Dependents" [ref=e155] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewDependents/empNumber/7
+          - tab "Immigration" [ref=e156]:
+            - link "Immigration" [ref=e157] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewImmigration/empNumber/7
+          - tab "Job" [ref=e158]:
+            - link "Job" [ref=e159] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewJobDetails/empNumber/7
+          - tab "Salary" [ref=e160]:
+            - link "Salary" [ref=e161] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewSalaryList/empNumber/7
+          - tab "Report-to" [ref=e162]:
+            - link "Report-to" [ref=e163] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewReportToDetails/empNumber/7
+          - tab "Qualifications" [ref=e164]:
+            - link "Qualifications" [ref=e165] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewQualifications/empNumber/7
+          - tab "Memberships" [ref=e166]:
+            - link "Memberships" [ref=e167] [cursor=pointer]:
+              - /url: /web/index.php/pim/viewMemberships/empNumber/7
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - heading "Personal Details" [level=6] [ref=e170]
+          - separator [ref=e171]
+          - generic [ref=e172]:
+            - generic [ref=e176]:
+              - generic [ref=e178]: Employee Full Name*
+              - generic [ref=e179]:
+                - textbox "First Name" [ref=e182]: Cp
+                - textbox "Middle Name" [ref=e185]: Mishra
+                - textbox "Last Name" [ref=e188]: Mishra Ji
+            - separator [ref=e189]
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - generic [ref=e193]:
+                  - generic [ref=e195]: Employee Id
+                  - textbox [ref=e197]: "12345"
+                - generic [ref=e199]:
+                  - generic [ref=e201]: Other Id
+                  - textbox [ref=e203]: "4957589"
+              - generic [ref=e204]:
+                - generic [ref=e206]:
+                  - generic [ref=e208]: Driver's License Number
+                  - textbox [ref=e210]: abcdeddd
+                - generic [ref=e212]:
+                  - generic [ref=e214]: License Expiry Date
+                  - generic [ref=e217]:
+                    - textbox "yyyy-dd-mm" [ref=e218]: "971792344"
+                    - generic [ref=e219] [cursor=pointer]: 
+                  - generic [ref=e220]: Should be a valid date in yyyy-dd-mm format
+            - separator [ref=e221]
+            - generic [ref=e222]:
+              - generic [ref=e223]:
+                - generic [ref=e225]:
+                  - generic [ref=e227]: Nationality
+                  - generic [ref=e230] [cursor=pointer]:
+                    - generic [ref=e231]: Algerian
+                    - generic [ref=e233]: 
+                - generic [ref=e235]:
+                  - generic [ref=e237]: Marital Status
+                  - generic [ref=e239]:
+                    - generic [ref=e240] [cursor=pointer]:
+                      - generic [active] [ref=e241]: Married
+                      - generic [ref=e243]: 
+                    - listbox [ref=e244]:
+                      - option "-- Select --" [ref=e245] [cursor=pointer]
+                      - option "Single" [ref=e246] [cursor=pointer]:
+                        - generic [ref=e247]: Single
+                      - option "Married" [ref=e248]:
+                        - generic [ref=e249]: Married
+                      - option "Other" [ref=e250] [cursor=pointer]:
+                        - generic [ref=e251]: Other
+              - generic [ref=e252]:
+                - generic [ref=e254]:
+                  - generic [ref=e256]: Date of Birth
+                  - generic [ref=e259]:
+                    - textbox "yyyy-dd-mm" [ref=e260]: 2026-12-12
+                    - generic [ref=e261] [cursor=pointer]: 
+                - generic [ref=e263]:
+                  - generic [ref=e265]: Gender
+                  - generic [ref=e266]:
+                    - generic [ref=e270] [cursor=pointer]:
+                      - radio "Male" [checked] [ref=e271]
+                      - text: Male
+                    - generic [ref=e276] [cursor=pointer]:
+                      - radio "Female" [ref=e277]
+                      - text: Female
+            - separator [ref=e279]
+            - generic [ref=e280]:
+              - paragraph [ref=e281]: "* Required"
+              - button "Save" [ref=e282] [cursor=pointer]
+        - generic [ref=e283]:
+          - separator [ref=e284]
+          - generic [ref=e285]:
+            - heading "Custom Fields" [level=6] [ref=e286]
+            - separator [ref=e287]
+            - generic [ref=e288]:
+              - generic [ref=e290]:
+                - generic [ref=e292]:
+                  - generic [ref=e294]: Blood Type
+                  - generic [ref=e297] [cursor=pointer]:
+                    - generic [ref=e298]: A+
+                    - generic [ref=e300]: 
+                - generic [ref=e302]:
+                  - generic [ref=e304]: qualifications
+                  - generic [ref=e307] [cursor=pointer]:
+                    - generic [ref=e308]: "-- Select --"
+                    - generic [ref=e310]: 
+                - generic [ref=e312]:
+                  - generic [ref=e314]: Test_Field
+                  - textbox [ref=e316]: "445"
+              - separator [ref=e317]
+              - button "Save" [ref=e319] [cursor=pointer]
+        - generic [ref=e320]:
+          - separator [ref=e321]
+          - generic [ref=e323]:
+            - heading "Attachments" [level=6] [ref=e324]
+            - button " Add" [ref=e325] [cursor=pointer]:
+              - generic [ref=e326]: 
+              - text: Add
+          - generic [ref=e327]:
+            - separator [ref=e328]
+            - generic [ref=e330]: (1) Record Found
+          - table [ref=e332]:
+            - rowgroup [ref=e333]:
+              - row " File Name Description Size Type Date Added Added By Actions" [ref=e334]:
+                - columnheader "" [ref=e335]:
+                  - generic [ref=e337] [cursor=pointer]:
+                    - checkbox "" [ref=e338]
+                    - generic [ref=e340]: 
+                - columnheader "File Name" [ref=e341]
+                - columnheader "Description" [ref=e342]
+                - columnheader "Size" [ref=e343]
+                - columnheader "Type" [ref=e344]
+                - columnheader "Date Added" [ref=e345]
+                - columnheader "Added By" [ref=e346]
+                - columnheader "Actions" [ref=e347]
+            - rowgroup [ref=e348]:
+              - row " test.png test 53.16 kB image/png 2024-06-02 Admin   " [ref=e350]:
+                - cell "" [ref=e351]:
+                  - generic [ref=e354] [cursor=pointer]:
+                    - checkbox "" [ref=e355]
+                    - generic [ref=e357]: 
+                - cell "test.png" [ref=e358]:
+                  - generic [ref=e359]: test.png
+                - cell "test" [ref=e360]:
+                  - generic [ref=e361]: test
+                - cell "53.16 kB" [ref=e362]:
+                  - generic [ref=e363]: 53.16 kB
+                - cell "image/png" [ref=e364]:
+                  - generic [ref=e365]: image/png
+                - cell "2024-06-02" [ref=e366]:
+                  - generic [ref=e367]: 2024-06-02
+                - cell "Admin" [ref=e368]:
+                  - generic [ref=e369]: Admin
+                - cell "  " [ref=e370]:
+                  - generic [ref=e371]:
+                    - button "" [ref=e372] [cursor=pointer]:
+                      - generic [ref=e373]: 
+                    - button "" [ref=e374] [cursor=pointer]:
+                      - generic [ref=e375]: 
+                    - button "" [ref=e376] [cursor=pointer]:
+                      - generic [ref=e377]: 
+    - generic [ref=e378]:
+      - paragraph [ref=e379]: OrangeHRM OS 5.9
+      - paragraph [ref=e380]:
+        - text: © 2005 - 2026
+        - link "OrangeHRM, Inc" [ref=e381] [cursor=pointer]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  1  | class myinfo {
+  2  |     constructor(page) {
+  3  |         this.page = page;
+  4  |         this.myinfo_option = page.getByRole('link', { name: 'My Info' });
+  5  |         this.addPhotoButton = page.locator('(//*[@class="employee-image"])[1]');
+  6  |         this.uploadInput = page.locator('input[type="file"]');
+  7  |         this.personal_details = page.getByText('Personal Details', { exact: true });
+  8  |         this.personal_details_firstname = page.getByPlaceholder('First Name');
+  9  |         this.personal_details_middlename = page.getByPlaceholder('Middle Name');
+  10 |         this.personal_details_lastname = page.getByPlaceholder('Last Name');
+  11 |         this.personal_details_employeeid = page.locator('(//*[@class="oxd-input oxd-input--active"])[2]');
+  12 |         this.personal_details_otherid = page.locator('(//*[@class="oxd-input oxd-input--active"])[3]');
+  13 |         this.personal_details_driverliscensenumber = page.locator('(//*[@class="oxd-input oxd-input--active"])[4]');
+  14 |         this.personal_details_liscense_expiry_date = page.locator('(//*[@class="oxd-input oxd-input--active"])[5]');
+  15 |         this.nationality = page.locator('(//*[@class="oxd-select-text oxd-select-text--active"])[1]');
+  16 |         this.nationality_selection = page.locator('.oxd-select-option', { hasText: 'Algerian' });
+  17 |         this.marital_status = page.locator('(//*[@class="oxd-select-text oxd-select-text--active"])[2]');
+  18 |         this.gender_selection = page.getByRole('radio', { name: 'Male' });
+  19 |         this.save = page.getByRole('button', { name: ' Save ' });
+  20 |     }
+  21 | 
+  22 |     async myinfoupdate() {
+  23 |         await this.myinfo_option.click();
+  24 |         await this.addPhotoButton.click();
+  25 |         await this.uploadInput.setInputFiles('/Users/chandraprakashmishra/Downloads/images.jpeg');
+  26 |         await this.personal_details.click();
+  27 |         await this.personal_details_firstname.fill('Cp');
+  28 |         await this.personal_details_middlename.fill('Mishra');
+  29 |         await this.personal_details_lastname.fill('Mishra Ji');
+  30 |         await this.personal_details_employeeid.fill('12345');
+  31 |         await this.personal_details_otherid.fill('abcdeddd');
+  32 |         await this.personal_details_driverliscensenumber.fill('971792344');
+  33 |         await this.personal_details_liscense_expiry_date.fill('2026-12-12');
+  34 |         await this.nationality.click();
+  35 |         await this.nationality_selection.click();
+  36 |         await this.marital_status.click();
+  37 |         await this.page.keyboard.press('ArrowDown');
+  38 |         await this.page.keyboard.press('ArrowDown');
+  39 |         await this.page.keyboard.press('Enter');
+> 40 |         await this.gender_selection.click();
+     |                                     ^ Error: locator.click: Error: strict mode violation: getByRole('radio', { name: 'Male' }) resolved to 2 elements:
+  41 |         await this.save.click();
+  42 | 
+  43 |     }
+  44 | 
+  45 | 
+  46 | 
+  47 | 
+  48 | }
+  49 | module.exports = myinfo;
+```

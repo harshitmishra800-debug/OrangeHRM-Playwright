@@ -2,10 +2,7 @@ class leave {
     constructor(page) {
         this.page = page;
         this.leave = page.locator('(//*[@class="oxd-text oxd-text--span oxd-main-menu-item--name"])[3]');
-        this.myLeave = page.getByRole('link', {
-            name: 'Recruitment',
-            exact: true
-        });
+        this.myLeave = page.locator('//*[@class="oxd-main-menu-item active"]');
         this.calender_view = page.locator('(//*[@placeholder="yyyy-dd-mm"])[1]');
         this.month_view = page.locator('.oxd-calendar-selector-month-selected');
         this.month_selection = page.locator(
@@ -29,9 +26,8 @@ class leave {
         );
         this.to_date = page.locator('(//*[@placeholder="yyyy-dd-mm"])[2]');
         this.leave_type = page.locator('(//*[@class="oxd-select-text oxd-select-text--active"])[2]');
-        this.leave_type_selection = page.getByText('US - FMLA', {
-            exact: true
-        });
+        this.leave_type_selection = page.locator('.oxd-select-option', {
+    hasText: 'US - FMLA'});
 
         this.assign_leave = page.getByRole('link', { name: 'Assign Leave' });
         this.employee_name = page.locator('//*[@placeholder="Type for hints..."]');
