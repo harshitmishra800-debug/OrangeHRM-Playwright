@@ -16,7 +16,7 @@ this.nationality=page.locator('(//*[@class="oxd-select-text oxd-select-text--act
 this.nationality_selection=page.locator('.oxd-select-option',{hasText:'Algerian'});
 this.marital_status=page.locator('(//*[@class="oxd-select-text oxd-select-text--active"])[2]');
 this.gender_selection=page.getByRole('radio', { name: 'Male' });
-this.save=page.getByRole('button',{name:' Save '});
+this.save=page.getByRole('button',{name:' Save '});s
 }
 
 async myinfoupdate(){
