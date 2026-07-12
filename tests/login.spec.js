@@ -16,7 +16,7 @@ test("Action Performed", async ({ page }) => {
     await Job.job_actions();
     const PIM = new pim(page);
     await PIM.pimsearch();
-    const Leave = new leave(page);
+    const Leave = new leave(page);//ss
     await Leave.leave_actions();
    const MyInfo=new myinfo(page);
    await MyInfo.myinfoupdate();
