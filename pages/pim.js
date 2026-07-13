@@ -14,14 +14,14 @@ class pim {
         this.supervisorname_selection = page.locator('//*[@class="oxd-autocomplete-option"]').first();
         this.jobtitle = page.locator('(//*[@class="oxd-select-text-input"])[3]');
         this.jobtitle_selection = page.getByText('QA Lead', { exact: true });
-        //this.sabunit = page.locator('(//*[@class="oxd-select-text-input"])[4]');
-       // this.sabunit_selection = page.getByText('Human Resources', { exact: true });
+        this.sabunit = page.locator('(//*[@class="oxd-select-text-input"])[4]');
+       this.sabunit_selection = page.getByText('Human Resources', { exact: true });
         this.search = page.locator('//*[@type="submit"]');
     }
     async pimsearch() {
         await this.pim.click();
         await this.employee_name.fill('a');
-        await this.page.waitForTimeout(1000);
+        await this.page.waitForTimeout(2000);
         await this.page.keyboard.press('ArrowDown');
         await this.page.keyboard.press('Enter');
         await this.employee_id.fill('300');
@@ -35,8 +35,8 @@ class pim {
         await this.page.keyboard.press('Enter');
         await this.jobtitle.click();
         await this.jobtitle_selection.click();
-        //await this.sabunit.click()
-        //await this.sabunit_selection.click();
+        await this.sabunit.click()
+        await this.sabunit_selection.click();
 
         await this.search.click();
 

@@ -27,7 +27,7 @@ class admin {
         await this.user_role.click();
         await this.userrole_option_selection.click();
         await this.employee_name.fill("A");
-        await this.page.waitForTimeout(10000);
+        await this.page.waitForTimeout(2000);
 
         await this.page.keyboard.press("ArrowDown");
         await this.page.keyboard.press("Enter");

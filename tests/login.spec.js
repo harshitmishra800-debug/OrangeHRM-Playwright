@@ -5,6 +5,7 @@ const job = require("../pages/job");
 const pim = require("../pages/pim");
 const leave = require("../pages/leave");
 const myinfo=require("../pages/myinfo");
+const buzz=require("../pages/buzz");
 
 test("Action Performed", async ({ page }) => {
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -20,5 +21,8 @@ test("Action Performed", async ({ page }) => {
     await Leave.leave_actions();
    const MyInfo=new myinfo(page);
    await MyInfo.myinfoupdate();
+   const Buzz=new buzz(page);
+   await Buzz.buzzactions();
+
    
 })

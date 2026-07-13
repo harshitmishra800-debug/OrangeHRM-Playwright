@@ -18,7 +18,7 @@ class job {
         await this.joboption.click();
         await this.jobtitle.click();
         await this.job_add.click();
-        await this.job_title.fill('Software QAEngineer1');
+        await this.job_title.fill('Software QAEngineer11');
         await this.job_description.fill('Responsible for developing and maintaining software applications.');
         await this.job_specification.setInputFiles('/Users/chandraprakashmishra/Downloads/Chandra_Prakash_Mishra_QA_Resume.pdf');
         await this.note.fill('Additional notes for the job posting.');
